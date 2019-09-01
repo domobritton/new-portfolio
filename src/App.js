@@ -1,50 +1,58 @@
-import React, { Component } from "react"
-import logo from "./logo.svg"
-import "./App.css"
+import React from 'react';
+import { Router } from '@reach/router';
+import glamorous from 'glamorous';
+import Home from './containers/home';
+import About from './containers/about';
 
-class LambdaDemo extends Component {
-  constructor(props) {
-    super(props)
-    this.state = { loading: false, msg: null }
-  }
+const Wrapper = glamorous.div({
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  height: '100%',
+  width: '100vw',
+  minHeight: '100vh'
+});
 
-  handleClick = api => e => {
-    e.preventDefault()
+// this is used to use netlify serverless functions inside the same repo
 
-    this.setState({ loading: true })
-    fetch("/.netlify/functions/" + api)
-      .then(response => response.json())
-      .then(json => this.setState({ loading: false, msg: json.msg }))
-  }
+// class LambdaDemo extends Component {
+//   constructor(props) {
+//     super(props)
+//     this.state = { loading: false, msg: null }
+//   }
 
-  render() {
-    const { loading, msg } = this.state
+//   handleClick = api => e => {
+//     e.preventDefault()
 
-    return (
-      <p>
-        <button onClick={this.handleClick("hello")}>{loading ? "Loading..." : "Call Lambda"}</button>
-        <button onClick={this.handleClick("async-dadjoke")}>{loading ? "Loading..." : "Call Async Lambda"}</button>
-        <br />
-        <span>{msg}</span>
-      </p>
-    )
-  }
-}
+//     this.setState({ loading: true })
+//     fetch('/.netlify/functions/' + api)
+//       .then(response => response.json())
+//       .then(json => this.setState({ loading: false, msg: json.msg }))
+//   }
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <LambdaDemo />
-        </header>
-      </div>
-    )
-  }
-}
+//   render() {
+//     const { loading, msg } = this.state
 
-export default App
+//     return (
+//       <p>
+//         <button onClick={this.handleClick('hello')}>{loading ? 'Loading...' : 'Call Lambda'}</button>
+//         <button onClick={this.handleClick('async-dadjoke')}>{loading ? 'Loading...' : 'Call Async Lambda'}</button>
+//         <br />
+//         <span>{msg}</span>
+//       </p>
+//     )
+//   }
+// }
+
+const App = () => {
+  return (
+    <Wrapper>
+      <Router>
+        <Home path="/" />
+        <About path="about" />
+      </Router>
+    </Wrapper>
+  );
+};
+
+export default App;
