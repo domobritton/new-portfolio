@@ -1554,6 +1554,11 @@ animejs@^2.2.0:
   resolved "https://registry.yarnpkg.com/animejs/-/animejs-2.2.0.tgz#35eefdfc535b81949c9cb06f0b3e60c02e6fdc80"
   integrity sha1-Ne79/FNbgZScnLBvCz5gwC5v3IA=
 
+animejs@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/animejs/-/animejs-3.1.0.tgz#748a90fc1d4bef3efed64508af9a6a82babf5c47"
+  integrity sha512-BjnCroPPQPEAngT0M89pz9TBcOGgOFLnVoq3+jV2upl4rn60k57/AXvESTnuILsNgOEjGuhMEOMp7IlQzk40kA==
+
 ansi-colors@^3.0.0:
   version "3.2.4"
   resolved "https://registry.yarnpkg.com/ansi-colors/-/ansi-colors-3.2.4.tgz#e3a3da4bfbae6c86a9c285625de124a234026fbf"
@@ -8450,6 +8455,13 @@ react-scripts@^3.0.1:
     workbox-webpack-plugin "4.3.1"
   optionalDependencies:
     fsevents "2.0.7"
+
+react-typist@^2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/react-typist/-/react-typist-2.0.5.tgz#9830395a73a03e6368e1392ecb98edaa3a648e44"
+  integrity sha512-iZCkeqeegO0TlkTMiH2JD1tvMtY9RrXkRylnAI6m8aCVAUUwNzoWTVF7CKLij6THeOMcUDCznLDDvNp55s+YZA==
+  dependencies:
+    prop-types "^15.5.10"
 
 react@^16.8.6:
   version "16.9.0"
