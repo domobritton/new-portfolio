@@ -14,7 +14,7 @@ export const ButtonText1 = ({ text, handleIndexChange }) => {
     return (
       <Typist
         avgTypingDelay={300}
-        startDelay={2000}
+        // startDelay={2000}
         cursor={{ hideWhenDone: true }}
         onTypingDone={handleIndexChange}
       >
@@ -31,7 +31,7 @@ export const ButtonText2 = ({ text, handleIndexChange }) => {
   if (text) {
     return (
       <Typist
-        avgTypingDelay={180}
+        avgTypingDelay={100}
         startDelay={2000}
         cursor={{ hideWhenDone: true }}
         onTypingDone={handleIndexChange}
