@@ -24,7 +24,7 @@ const Button = () => {
   const [index, setIndex] = useState(0);
   const bxRef = createRef();
 
-  const anim = () => {
+  const animate = () => {
     const time = anime.timeline();
     time
       .add({
@@ -51,7 +51,7 @@ const Button = () => {
   };
 
   useEffect(() => {
-    anim();
+    animate();
   }, []);
 
   return (
